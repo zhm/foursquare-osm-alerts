@@ -19,3 +19,7 @@ Get a push notification when you check in on Foursquare at a place that's not ma
 - You will be redirected to nowhere after authorizing your account, but that's not important.
 - Now your foursquare account can trigger the Push API with the app
 - Checkin on foursquare to get push notifications
+
+### Running the server (not required, mostly for server deployment reference)
+- Make a self-signed SSL cert `make-root-ca-and-certificates.sh 'yourdomain.com'`
+- `sudo PUSHOVER_TOKEN={YOUR PUSHOVER APP TOKEN} NODE_ENV=production node index.js`
