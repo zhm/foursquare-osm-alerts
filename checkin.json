@@ -1,0 +1,42 @@
+{
+    "venue": {
+        "beenHere": {}, 
+        "categories": [
+            {
+                "icon": "https://ss1.4sqi.net/img/categories/food/default.png", 
+                "id": "4bf58dd8d48988d14e941735", 
+                "name": "American Restaurant", 
+                "parents": [
+                    "Food"
+                ], 
+                "pluralName": "American Restaurants", 
+                "primary": true, 
+                "shortName": "American"
+            }
+        ], 
+        "id": "4bcb4f39cc8cd13adf19bfcf", 
+        "location": {
+            "address": "18627 Us 19", 
+            "cc": "US", 
+            "city": "Clearwater", 
+            "country": "United States", 
+            "formattedAddress": [
+                "18627 Us 19", 
+                "Clearwater, FL 33764"
+            ], 
+            "lat": 27.9416225136612, 
+            "lng": -82.7301587978142, 
+            "postalCode": "33764", 
+            "state": "FL"
+        }, 
+        "name": "Steak 'n Shake", 
+        "stats": {
+            "checkinsCount": 1273, 
+            "tipCount": 16, 
+            "usersCount": 633
+        }, 
+        "storeId": "289", 
+        "url": "http://www.steaknshake.com/locations/23727-steak-n-shake-us-19-clearwater", 
+        "verified": true
+    }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "pushpin-notify",
+  "version": "0.0.1",
+  "description": "Pushpin Alert",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zac McCormick <zac.mccormick@gmail.com> (http://github.com/zhm)",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.5.2",
+    "express": "^4.7.2",
+    "lunr": "^0.5.4",
+    "pusher": "^1.0.0",
+    "pushover-notifications": "^0.2.0",
+    "request": "^2.39.0",
+    "ssl-root-cas": "^1.1.7",
+    "underscore": "^1.6.0"
+  }
+}
