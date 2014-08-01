@@ -21,7 +21,7 @@ function findByName(data, name) {
 
   var index = nameIndex(named);
 
-  results = index.search(name);
+  results = index.search(searchableName(name));
 
   if (results.length > 0) {
     return findObjectsByID(named, parseInt(results[0].ref));
@@ -36,13 +36,18 @@ function findObjectsByID(elements, id) {
   });
 }
 
+function searchableName(name) {
+  var rx = /[^0-9a-zA-Z]+/g
+  return name.toLowerCase().replace(rx, '');
+}
+
 function nameIndex(elements) {
   var index = lunr(function() {
     this.field('name');
   });
 
   _.each(elements, function(element) {
-    index.add({ id: element.id, name: element.tags.name });
+    index.add({ id: element.id, name: searchableName(element.tags.name) });
   });
 
   return index;
