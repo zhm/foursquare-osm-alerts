@@ -49,18 +49,24 @@ app.all('/user/:user', function(req, res){
   res.send('');
 });
 
-// require('ssl-root-cas')
-//   .inject()
-//   .addFile(path.join(__dirname, 'certs', 'server', 'my-root-ca.crt.pem'));
+var port = 3005;
 
-// options = {
-//   key: fs.readFileSync(path.join(__dirname, 'certs', 'server', 'my-server.key.pem'))
-// , cert: fs.readFileSync(path.join(__dirname, 'certs', 'server', 'my-server.crt.pem'))
-// };
+if (process.env.NODE_ENV === 'production') {
+  require('ssl-root-cas')
+    .inject()
+    .addFile(path.join(__dirname, 'certs', 'server', 'my-root-ca.crt.pem'));
 
-// var httpsServer = https.createServer(options, app);
+  options = {
+    key: fs.readFileSync(path.join(__dirname, 'certs', 'server', 'my-server.key.pem'))
+  , cert: fs.readFileSync(path.join(__dirname, 'certs', 'server', 'my-server.crt.pem'))
+  };
+
+  var httpsServer = https.createServer(options, app);
+  httpsServer.listen(443);
+
+  port = 80;
+}
+
 var httpServer = http.createServer(app);
 
-// app.listen(3005);
-// httpsServer.listen(443);
-httpServer.listen(3005);
+httpServer.listen(port);
