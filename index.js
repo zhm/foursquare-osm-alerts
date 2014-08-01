@@ -17,6 +17,7 @@ var BUFFER = 250; // 250 meters
 app.all('/user/:user', function(req, res){
   checkin = JSON.parse(req.body.checkin);
 
+  // log to file for now so I can debug specific issues w/ place finding
   console.log(JSON.stringify(checkin));
 
   var latitude = checkin.venue.location.lat;
