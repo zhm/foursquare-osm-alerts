@@ -62,11 +62,16 @@ if (process.env.NODE_ENV === 'production') {
   };
 
   var httpsServer = https.createServer(options, app);
+
+  console.log('Starting HTTPS server on port 443');
+
   httpsServer.listen(443);
 
   port = 80;
 }
 
 var httpServer = http.createServer(app);
+
+console.log('Starting HTTPS server on port ' + port);
 
 httpServer.listen(port);
