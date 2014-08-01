@@ -17,6 +17,8 @@ var BUFFER = 250; // 250 meters
 app.all('/user/:user', function(req, res){
   checkin = JSON.parse(req.body.checkin);
 
+  console.log(JSON.stringify(checkin));
+
   var latitude = checkin.venue.location.lat;
   var longitude = checkin.venue.location.lng;
   var name = checkin.venue.name;

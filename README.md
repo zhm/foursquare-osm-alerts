@@ -22,4 +22,4 @@ Get a push notification when you check in on Foursquare at a place that's not ma
 
 ### Running the server (not required, mostly for server deployment reference)
 - Make a self-signed SSL cert `make-root-ca-and-certificates.sh 'yourdomain.com'`
-- `sudo PUSHOVER_TOKEN={YOUR PUSHOVER APP TOKEN} NODE_ENV=production node index.js`
+- `sudo PUSHOVER_TOKEN={YOUR PUSHOVER APP TOKEN} NODE_ENV=production node index.js > app.log 2>&1`
