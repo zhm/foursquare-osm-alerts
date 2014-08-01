@@ -14,7 +14,7 @@ Get a push notification when you check in on Foursquare at a place that's not ma
 - After you've created your app, get the 'Client id' of the app
 - Add your own Foursquare account to your own app using OAuth by visiting this URL (make sure to replace your client id in the URL):
 
-`https://foursquare.com/oauth2/authenticate?client_id={YOUR APP CLIENT ID}&response_type=token&redirect_uri=1
+`https://foursquare.com/oauth2/authenticate?client_id={YOUR APP CLIENT ID}&response_type=token&redirect_uri=1`
 
 - You will be redirected to nowhere after authorizing your account, but that's not important.
 - Now your foursquare account can trigger the Push API with the app
